@@ -218,7 +218,7 @@ nav .flex{
     transform: scale(1.05);
 }
 
- 
+ /* selling products styling*/
 .selling-items{
     background-color: #FFFFFF;
     padding:20px;
@@ -243,7 +243,7 @@ nav .flex{
 .fancy{
     color: #4581FB;
 }
-.content{
+.img-content{
      font-family:"Poppins", sans-serif ;
      font-weight: 400;
      font-style: normal;
@@ -255,7 +255,7 @@ nav .flex{
 }
 /* products items */
 .w-20{
-     max-width: 30%;
+     max-width: 40%;
      margin-top: 10px;
      text-align: center;
      padding: 10px;
@@ -294,12 +294,16 @@ nav .flex{
 }
 
 .img-section{
-    display: grid;
+    display: flex;
     justify-content: center;
     gap: 20px;
 }
+.img-section > div{
+    position: relative;
+}
 
 .title{
+    position: absolute;
     border-radius: 15px;
     background-color: rgba(243, 238, 238, 0.774);
     color: #2C3D5F;
@@ -307,8 +311,116 @@ nav .flex{
     font-family: Poppins;
     font-weight: 500;
     text-align: center;
+    top: 45%;
+    left: 30%;
 }
 
-   
+/* Blog section styling*/
+.blogs{
+    width: 50%;
+    margin:auto;
+    overflow: hidden;
+    padding: 40px 0;
+}
 
- 
+/* top heading styling*/
+.top-heading{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-style: Bold;
+    font-size: 50px;
+}
+.highlight{
+    color: #4581FB;
+}
+/*content styling*/
+.main-content{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 24px;
+    color: #2C3D5F;
+}
+
+/* blogs posts container*/
+.blog-posts{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/*individual post styling*/
+.post{
+    background-color: #FAFCFE;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width:50%;
+    padding:20px;
+}
+
+/*post content area*/
+.post-content{
+    padding: 10px;
+}
+.post-content img{
+    margin-top: 0;
+}
+.post-content h3{
+    margin-top:0;
+    margin-bottom: 0;
+    color: #2C3D5F;
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+}
+.post-content p{
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.34px;
+    color: #2C3D5F;
+    opacity: 70%;
+}
+
+/*post meta information*/
+.post-meta{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    color: #2C3D5F;
+}
+.post-meta span{
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.post-meta img{
+    margin-right: 5px;
+}
+
+/* Buttion Styling*/
+.read-more{
+    display: inline-block;
+    background-color: #4581FB;
+    color: #FFFFFF;
+    padding: 13px 110px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
