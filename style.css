@@ -317,7 +317,8 @@ nav .flex{
 
 /* Blog section styling*/
 .blogs{
-    width: 50%;
+    width: 100%;
+    height: 100%;
     margin:auto;
     overflow: hidden;
     padding: 40px 0;
@@ -326,7 +327,7 @@ nav .flex{
 /* top heading styling*/
 .top-heading{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 600;
     font-style: Bold;
     font-size: 50px;
@@ -337,7 +338,7 @@ nav .flex{
 /*content styling*/
 .main-content{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: Poppins;
     font-weight: 400;
     font-style: Regular;
@@ -359,7 +360,6 @@ nav .flex{
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width:50%;
     padding:20px;
 }
 
@@ -367,8 +367,8 @@ nav .flex{
 .post-content{
     padding: 10px;
 }
-.post-content img{
-    margin-top: 0;
+.rectangle{
+    
 }
 .post-content h3{
     margin-top:0;
@@ -421,6 +421,132 @@ nav .flex{
     text-decoration: none;
     border: none;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
+/*footer styling*/
+.footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color:#FAFCFE;
+    border-top: 1px solid #eee;
+}
+.footer-section{
+    flex: 1;
+    margin: 0 15px;
+}
+.footer-section h3{
+    font-size: 18px;
+    color: #2C3D5F;
+    font-weight: 500;
+}
+.footer-section p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.34px;
+    color: #2C3D5F;
+}
+.link-section{
+    flex: 1;
+    margin: 0 15px;
+}
+.link-section h3{
+    font-size: 18px;
+    color: #2C3D5F;
+    font-weight: 500;
+}
+.link-section ul{
+    list-style: none;
+    padding: 0;
+}
+.link-section ul li{
+    margin-bottom: 10px;
+}
+.link-section ul li a{
+    text-decoration: none;
+    color: #2C3D5F;
+}
+.categories{
+    flex: 1;
+    margin: 0 15px;
+}
+.categories h3{
+    font-size: 18px;
+    color: #2C3D5F;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+.categories ul li{
+    margin-bottom: 10px;
+}
+.categories ul li a{
+    text-decoration: none;
+    color: #2C3D5F;
+    padding: 5px 0;
+    display: block;
+}
+.info-section{
+    flex: 1;
+    margin: 0 15px;
+}
+.info-section h3{
+     font-size: 18px;
+    color: #2C3D5F;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.info-section p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    gap: 10px;
+    color: #2C3D5F;
+}
+.info-section p img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+.info-section p a{
+    text-decoration: none;
+    color: #2C3D5F;
+}
+.social-icons{
+    display: flex;
+    gap:30px;
+    margin-top: 15px;
+}
+.social-icons img{
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s;
+}
+.footer-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color:#FAFCFE;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.34px;
+    color: #2C3D5F;
+}
+.copy-right{
+
+}
+.payment-method{
+     display: flex;
+     gap: 10px;
+}
