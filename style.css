@@ -417,7 +417,8 @@ nav .flex {
   border-radius: 12px;
   text-decoration: none;
   border: none;
-  cursor: pointer;  margin-bottom: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
   width: 100%;
 }
 
@@ -540,9 +541,7 @@ nav .flex {
     letter-spacing: 0.34px;
     color: #2C3D5F;
 }
-.copy-right{
 
-}
 .payment-method{
      display: flex;
      gap: 10px;
