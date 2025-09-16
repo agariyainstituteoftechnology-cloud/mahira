@@ -347,6 +347,7 @@ nav .flex {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  margin-bottom: 30px;
 }
 
 /*individual post styling*/
@@ -425,14 +426,15 @@ nav .flex {
 /*footer styling*/
 .footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 40px 20px;
     background-color:#FAFCFE;
     border-top: 1px solid #eee;
 }
 .footer-section{
-    flex: 1;
-    margin: 0 15px;
+    margin-bottom: 30px;
+
 }
 .footer-section h3{
     font-size: 18px;
@@ -449,7 +451,6 @@ nav .flex {
     color: #2C3D5F;
 }
 .link-section{
-    flex: 1;
     margin: 0 15px;
 }
 .link-section h3{
@@ -469,7 +470,6 @@ nav .flex {
     color: #2C3D5F;
 }
 .categories{
-    flex: 1;
     margin: 0 15px;
 }
 .categories h3{
@@ -493,7 +493,6 @@ nav .flex {
     display: block;
 }
 .info-section{
-    flex: 1;
     margin: 0 15px;
 }
 .info-section h3{
@@ -545,4 +544,5 @@ nav .flex {
 .payment-method{
      display: flex;
      gap: 10px;
+     justify-content: flex-end;
 }
