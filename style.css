@@ -444,14 +444,13 @@ nav .flex {
 .footer-section p{
     font-family: Poppins;
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.34px;
     color: #2C3D5F;
 }
 .link-section{
-    margin: 0 15px;
+    margin-bottom: 30px;
 }
 .link-section h3{
     font-size: 18px;
@@ -470,7 +469,7 @@ nav .flex {
     color: #2C3D5F;
 }
 .categories{
-    margin: 0 15px;
+    margin-bottom: 30px;
 }
 .categories h3{
     font-size: 18px;
@@ -493,7 +492,7 @@ nav .flex {
     display: block;
 }
 .info-section{
-    margin: 0 15px;
+    margin-bottom: 30px;
 }
 .info-section h3{
      font-size: 18px;
@@ -527,10 +526,14 @@ nav .flex {
 .social-icons img{
     width: 20px;
     height: 20px;
-    transition: transform 0.2s;
+  
 }
+
+/* footer bottom section styling*/
+
 .footer-bottom{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px;
     background-color:#FAFCFE;
@@ -542,7 +545,5 @@ nav .flex {
 }
 
 .payment-method{
-     display: flex;
-     gap: 10px;
      justify-content: flex-end;
 }
