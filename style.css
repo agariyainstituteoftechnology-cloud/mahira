@@ -431,7 +431,8 @@ nav .flex {
 }
 .footer-title{
    display: inline-block;
-   padding-bottom: 10px;
+   position: relative;
+   margin-top: 20px;
    border-bottom: 3px solid #4581fb;
    width: 30px;
 }
