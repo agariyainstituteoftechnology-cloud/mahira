@@ -526,13 +526,18 @@ nav .flex {
 .filter-option{
  display: flex;
  align-items: center;
- gap: 10px;
+ gap: 20px;
  cursor: pointer;
 }
-/* Dropdown arrow */
-.dropdown::after{
-  content: "\25BC"; /*unicode arrow */
-
+.chevron-down{
+  width: 10px;
+  height: 10PX;
+  border-bottom: 1px solid currentColor;
+  border-right: 1px solid currentColor ;
+  display: inline-block;
+  transform: rotate(45deg);
+  padding-bottom: 10px;
+  
 }
 
 /* container */
