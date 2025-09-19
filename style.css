@@ -515,7 +515,72 @@ nav .flex {
   gap: 10px;
   display: flex;
 }
+/* filter section styling */
+.filter{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 16px;
+  color: #2C3D5F;
+}
+.filter-option{
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ cursor: pointer;
+}
+/* Dropdown arrow */
+.dropdown::after{
+  content: "\25BC"; /*unicode arrow */
+
+}
+
 /* container */
 .pagination{
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 40px 0;
+  font-family:Poppins ;
+}
+/* page numbers */
+.pagination a{
+  text-decoration: none;
+  color: #34373C;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 60%;
+  transition: background-color 0.3s ease;
+}
+/* hover effect */
+.pagination a:hover{
+  background-color: #4581fb;
+}
+
+/*active page */
+.pagination .action{
+  background-color: #4581FB;
+  color: white;
+  font-weight: bold;
+}
+/* Arrows */
+.pagination .left-arrow{
+  font-size: 25px;
+  padding: 8px 12px;
+  color: #34373C;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  gap: 10px;
+}
+.pagination .right-arrow{
+  color: #4581FB;
+  font-size: 25px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  gap: 10px;
+ }
+.left-arrow:hover{
+  background-color: #e0f0ff;
 }
