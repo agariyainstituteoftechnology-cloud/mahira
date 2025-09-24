@@ -13,105 +13,240 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="main-header">
+  <header class="main-header">
+    <div class="container">
+      <div class="flex items-center w-full wrapper">
+        <div class="w-20">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <div class="w-60">
+          <nav>
+            <ul class="flex justify-center">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Shop</a>
+              </li>
+              <li>
+                <a href="#">Men</a>
+              </li>
+              <li>
+                <a href="#">Women</a>
+              </li>
+              <li>
+                <a href="#">Kids</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="w-20">
+          <div class="flex justify-end">
+            <img src="images/user.png" alt="user" />
+            <img src="images/search.png" alt="search" />
+            <img src="images/shopping-bag.png" alt="shopping-bag" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="Product-page">
+    <div class="container">
+      <!-- Left: Product Images-->
+      <div class="product-images">
+        <img src="images/main-product.png" alt="Premier polo shirt">
+        <div class="thumbnails">
+          <img src="images/product-1.png" alt="shirt view-1">
+          <img src="images/product-2.png" alt="shirt view-2">
+          <img src="images/product-3.png" alt="shirt view-3">
+          <img src="images/product-4.png" alt="shirt view-4">
+        </div>
+      </div>
+      <!-- Right: Product Details-->
+      <div class="product-details">
+        <p class="sku">SKU: 2231</p>
+        <p class="availability">Availability: 1 in stock</p>
+        <h3>Premier Quality Polo Shirt</h3>
+        <p class="prices">$385.00</p>
+        <p class="tax-info">Tax included.</p>
+      </div>
+      <div class="rating">
+        <img src="images/ratingstars.png" alt="rating"> (4.0) 8 reviews
+      </div>
+      <!-- Colors -->
+      <div class="colors">
+        <span class="color-black"></span>
+        <span class="color-grey"></span>
+        <span class="color-blue"></span>
+        <span class="color-red"></span>
+      </div>
+      <div class="option">
+        <p>Sizes:  20 , 24</p>
+        <p class="materials">Materials 100%</p>
+      </div>
+      <!-- Quantity -->
+      <div class="quantiy">
+        <button>-</button>
+        <span class="number">01</span>
+        <button>+</button>
+      </div>
+      <!-- Buttons-->
+      <div class="buttons">
+        <button class="add-cart">Add To Cart</button>
+        <label class="terms">
+          <input type="checkbox" checked>
+          I agree with the terms and conditions
+        </label>
+        <button class="buy-now">Buy It Now</button>
+      </div>
+      <!-- Description Section -->
+      <div class="description">
+        <h3>Descriptions</h3>
+        <p>We are proud to present our best premium Shopify theme.</p>
+        <ul>
+          <li>This is multi-purpose software that can be used for any type of the store. Great variety of available options will make customization process very easy.</li>
+          <li>Please, take a look at feature list and compare with our competitors.</li>
+          <li>You can buy our theme and start your business online with minimal time investments.</li>
+          <li>E-Commerce support DropShipping app Oberlo.</li>
+          <li>E-Commerce Shopify theme is powerfool tool to create personal webshop.</li>
+        </ul>
+      </div>
+      <!-- Reviews Section -->
+      <div class="reviews">
+        <h3>Reviews</h3>
+        <div class="review-1">
+          <img src="images/review-1.png" alt="Albert Floros" />
+          <div class="details">
+            <p class="name">Albert Flores</p>
+            <img src="images/ratingstars.png" alt="rating" />
+            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
+            <span>01 day ago</span>
+          </div>
+        </div>
+        <div class="review-2">
+          <img src="images/review-2.png" alt="Brooklyn Simmons">
+          <div class="details">
+            <p class="name">Brooklyn Simmons</p>
+            <img src="images/ratingstars.png" alt="rating" />
+            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
+            <span>01 day ago</span>
+          </div>
+        </div>
+        <div class="review-3">
+          <img src="images/review-3.png" alt="Guy Hawkins">
+          <div class="details">
+            <p class="name">Guy Hawkins</p>
+            <img src="images/ratingstars.png" alt="rating" />
+            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
+            <span>01 day ago</span>
+          </div>
+        </div>
+      </div>
+      <!--Products-->
+      <div class="Related-product">
+        <h2>Related Products</h2>
+        <!-- Carousel-wrapper-->
+        <div class="carousel-wrapper">
+          <!-- left button-->
+         <button class="arrow-left">&#10094;</button>
+         <!-- right button-->
+         <button class="arrow-right">&#10095;</button>
+        </div>
+        <!-- product-1 -->
+        <div>
+          <div class="product-card w-25">
+          <img src="images/image 1.png" alt="Products" />
+          <img src="images/ratingstars.png" alt="rating" />
+          <h5 class="caption">Premier Cropped Skinny Jean</h5>
+          <p class="price">$385.00</p>
+        </div>
+        <!-- product-2 -->
+        <div class="product-card w-25">
+          <img src="images/image 2.png" alt="products" />
+          <img src="images/stars.png" alt="rating" />
+          <h5 class="caption">Premier Cropped Skinny Jean</h5>
+          <p class="price">$385.00</p>
+        </div>
+        <!-- product-3 -->
+        <div class="product-card w-25">
+          <img src="images/image 3.png" alt="products" />
+          <img src="images/rating.png" alt="rating" />
+          <h5 class="caption">Premier Cropped Skinny Jean</h5>
+          <p class="price">$385.00</p>
+        </div>
+        <!-- product-4 -->
+        <div class="product-card w-25">
+          <img src="images/image 4.png" alt="products" />
+          <img src="images/stars.png" alt="rating" />
+          <h5 class="caption">Premier Cropped Skinny Jean</h5>
+          <p class="price">$385.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer section -->
+    <footer class="footer">
       <div class="container">
-        <div class="flex items-center w-full wrapper">
-          <div class="w-20">
-            <img src="images/logo.png" alt="logo" />
+        <div class="footer-row flex">
+          <div class="footer-col">
+            <h3>About</h3>
+            <span class="footer-title"></span>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
           </div>
-          <div class="w-60">
-            <nav>
-              <ul class="flex justify-center">
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">Shop</a>
-                </li>
-                <li>
-                  <a href="#">Men</a>
-                </li>
-                <li>
-                  <a href="#">Women</a>
-                </li>
-                <li>
-                  <a href="#">Kids</a>
-                </li>
-                <li>
-                  <a href="#">Contact us</a>
-                </li>
-              </ul>
-            </nav>
+          <div class="footer-col">
+            <h3>Buy With Us</h3>
+            <span class="footer-title"> </span>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+            </ul>
           </div>
-          <div class="w-20">
-            <div class="flex justify-end">
-              <img src="images/user.png" alt="user" />
-              <img src="images/search.png" alt="search" />
-              <img src="images/shopping-bag.png" alt="shopping-bag" />
+          <div class="footer-col">
+            <h3>Categories</h3>
+            <span class="footer-title"> </span>
+            <ul>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Shoes</a></li>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Clearence</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <span class="footer-title"> </span>
+            <p><img src="images/marker 1.png" alt="address">7895 Piermont Dr NE Albuquerque, NM 198866, United States of US.</p>
+            <p><img src="images/phone-call 1.png" alt="contact"><a href="tel:+01234567890">+01 234 567 890</a></p>
+            <p><img src="images/envelope 1.png" alt="link"><a href="mailto:john.smith@domain.com">john.smith@domain.com</a></p>
+            <div class="social-icons">
+              <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+              <a href="#"><img src="images/twitter.png" alt="twitter"></a>
+              <a href="#"><img src="images/linkedin.png" alt="linkedin"></a>
+              <a href="#"><img src="images/instagram.png" alt="instagram"></a>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <section class="Product-page">
-      <div class="container">
-        <!-- Left: Product Images-->
-        <div class="product-images">
-          <img src="images/main-product.png" alt="Premier polo shirt">
-          <div class="thumbnails">
-            <img src="images/product-1.png" alt="shirt view-1">
-            <img src="images/product-2.png" alt="shirt view-2">
-            <img src="images/product-3.png" alt="shirt view-3">
-            <img src="images/product-4.png" alt="shirt view-4">
-          </div>
-        </div>
-        <!-- Right: Product Details-->
-        <div class="product-details">
-         <p class="sku">SKU: 2231</p>
-         <p class="availability">Availability: 1 in stock</p>
-         <h3>Premier Quality Polo Shirt</h3>
-         <p class="prices">$385.00</p>
-         <p class="tax-info">Tax included.</p>
-        </div>
-        <div class="rating">
-          <img src="images/ratingstars.png" alt="rating"> (4.0) 8 reviews
-        </div>
-        <!-- Colors -->
-        <div class="colors">
-         <span class="color-black"></span>
-         <span class="color-grey"></span>
-         <span class="color-blue"></span>
-         <span class="color-red"></span>
-        </div>
-        <div class="option">
-          <p>Sizes:  20 , 24</p>
-          <p class="materials">Materials 100%</p>
-        </div>
-        <!-- Quantity -->
-        <div class="quantiy">
-          <button>-</button>
-          <span class="number">01</span>
-          <button>+</button>
-        </div>
-        <!-- Buttons-->
-        <div class="buttons">
-         <button class="add-cart">Add To Cart</button>
-         <label class="terms">
-           <input type="checkbox" checked>
-           I agree with the terms and conditions
-         </label>
-         <button class="buy-now">Buy It Now</button>
-        </div>
-        <div class="description">
-         <h3>Descriptions</h3>
-         <p>We are proud to present our best premium Shopify theme.</p>
-         <ul>
-           <li>This is multi-purpose software that can be used for any type of the store. Great variety of available options will make customization process very easy.
-</li>
-         </ul>
 
+      <div class="footer-bottom">
+        <p class="logo-content"><img src="images/logo-2.png" alt="logo" /> © e-commerce 2022. All Rights Reserved</p>
+        <div class="payment-icons">
+          <img src="images/image 18.png" alt="G-pay" />
+          <img src="images/image 17.png" alt="VISA" />
+          <img src="images/image 16.png" alt="PayPal" />
+          <img src="images/image 20.png" alt="Mastercard" />
+          <img src="images/image 19.png" alt="ApplePay" />
         </div>
       </div>
-    </section>
+    </footer>
 </body>
 </html>
