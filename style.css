@@ -654,3 +654,46 @@ nav .flex {
 .left-arrow:hover{
   background-color: #e0f0ff;
 }
+
+/* Product page section styling */
+.Product-page{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #FAFCFE;
+}
+/* product images */
+.product-images{
+  max-width: 600px;
+  display: flex;
+  gap: 16px;
+}
+
+/* large image */
+.main-image img{
+  width: 100%;
+}
+.main-image:hover{
+  border: 3px solid #4581FB;
+}
+
+/* Thumbnails */
+.thumbnails{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+}
+.thumbnails img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s;
+  
+}
+.thumbnails img:hover{
+  border: 3px solid #4581FB;
+}
