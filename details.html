@@ -23,13 +23,13 @@
           <nav>
             <ul class="flex justify-center">
               <li>
-                <a href="#">Home</a>
+                <a href="home.html">Home</a>
               </li>
               <li>
-                <a href="#">Shop</a>
+                <a href="product.html">Shop</a>
               </li>
               <li>
-                <a href="#">Men</a>
+                <a href="details.html">Men</a>
               </li>
               <li>
                 <a href="#">Women</a>
@@ -53,12 +53,12 @@
       </div>
     </div>
   </header>
-  <section class="Product-page">
+  <section class="product-page">
     <div class="container">
-      <div class="product-images">
+      <div class="product-images W-50 flex items-center">
         
         <!-- Thumbnails -->
-        <div class="thumbnails">
+        <div class="thumbnails w-20">
           <img src="images/product-1.png" alt="shirt view-1" />
           <img src="images/product-2.png" alt="shirt view-2" />
           <img src="images/product-3.png" alt="shirt view-3" />
@@ -73,10 +73,10 @@
                 <img src="images/Vector.png" alt="search" />
               </button>
               <button class="left-side">
-                <img src="images/left-arrow.png" alt="arrow">
+                <img src="images/left-arrow.png" alt="arrow" />
               </button>
               <button class="right-side">
-                <img src="images/right-arrow.png" alt="arrow">
+                <img src="images/right-arrow.png" alt="arrow" />
                </button>
             </div>
           </div>
@@ -84,65 +84,78 @@
       </div>
     
       <!-- Right: Product Details-->
-      <div class="product-details">
-        <p class="sku">SKU: 2231</p>
-        <p class="availability">Availability: 1 in stock</p>
-        <h3>Premier Quality Polo Shirt</h3>
-        <p class="prices">$385.00</p>
-        <p class="tax-info">Tax included.</p>
+      <div class="w-50 img-detail">
+        <div class="product-details">
+          <p class="sku">SKU: 2231</p>
+          <p class="availability">Availability: 1 in stock</p>
+          <h3>Premier Quality Polo Shirt</h3>
+          <p class="price-info">$385.00</p>
+          <p class="tax-info">Tax included.</p>
+        </div>
+        <div class="rating">
+          <img src="images/ratingstars.png" alt="rating" /> (4.0) 8 reviews
+        </div>
+        <!-- Colors -->
+        <div class="colors">
+          <p>Colors:</p>
+         <div class="colour">
+           <span class="color-black"></span>
+           <span class="color-grey"></span>
+           <span class="color-blue"></span>
+           <span class="color-red"></span>
+          </div>
+        </div>
+        <!-- options -->
+        <div class="option">
+          <p class="size">Sizes:  20 , 24</p>
+          <p class="materials">Materials: 100% polyester</p>
+        </div>
+        <!-- Quantity -->
+        <div class="quantity-selector">
+          <button class="Quantity">- <span>01</span> +</button>
+          <button class="btn buy">Add To Cart</button>
+        </div>
+
+        <div class="actions">
+          <!-- Checkbox with label -->
+          <label class="terms">
+            <input type="checkbox" checked/>
+            I agree with the terms and conditions
+          </label>
+        </div>
+        <!-- Buttons -->
+        <div class="buttons"> 
+          <button class="btn Cart">But It Now</button>
+        </div>
       </div>
-      <div class="rating">
-        <img src="images/ratingstars.png" alt="rating" /> (4.0) 8 reviews
-      </div>
-      <!-- Colors -->
-      <div class="colors">
-        <span class="color-black"></span>
-        <span class="color-grey"></span>
-        <span class="color-blue"></span>
-        <span class="color-red"></span>
-      </div>
-      <!-- options -->
-      <div class="option">
-        <p>Sizes:  20 , 24</p>
-        <p class="materials">Materials 100%</p>
-      </div>
-      <!-- Quantity -->
-      <div class="quantiy">
-        <button>-</button>
-        <span class="number">01</span>
-        <button>+</button>
-      </div>
-      <!-- Buttons-->
-      <div class="buttons">
-        <button class="add-cart">Add To Cart</button>
-        <label class="terms">
-          <input type="checkbox" checked>
-          I agree with the terms and conditions
-        </label>
-        <button class="buy-now">Buy It Now</button>
-      </div>
+    </div>  
+  </section>  
+
+  <section class="description-section">
+    <div class="container">
       <!-- Description Section -->
-      <div class="description">
-        <h3>Descriptions</h3>
-        <p>We are proud to present our best premium Shopify theme.</p>
-        <ul>
-          <li>This is multi-purpose software that can be used for any type of the store. Great variety of available options will make customization process very easy.</li>
-          <li>Please, take a look at feature list and compare with our competitors.</li>
-          <li>You can buy our theme and start your business online with minimal time investments.</li>
-          <li>E-Commerce support DropShipping app Oberlo.</li>
-          <li>E-Commerce Shopify theme is powerfool tool to create personal webshop.</li>
-        </ul>
+     <div class="description w-50">
+       <h3>Descriptions</h3>
+       <p>We are proud to present our best premium Shopify theme.</p>
+       <ul>
+         <li>This is multi-purpose software that can be used for any type of the store. Great variety of available options will make customization process very easy.</li>
+         <li>Please, take a look at feature list and compare with our competitors.</li>
+         <li>You can buy our theme and start your business online with minimal time investments.</li>
+         <li class="list">E-Commerce support DropShipping app Oberlo.</li>
+         <li>E-Commerce Shopify theme is powerfool tool to create personal webshop.</li>
+       </ul>
       </div>
       <!-- Reviews Section -->
-      <div class="reviews">
+      <div class="reviews w-50">
         <h3>Reviews</h3>
         <div class="review-1">
           <img src="images/review-1.png" alt="Albert Floros" />
           <div class="details">
             <p class="name">Albert Flores</p>
             <img src="images/ratingstars.png" alt="rating" />
-            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
             <span>01 day ago</span>
+            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
+           
           </div>
         </div>
         <div class="review-2">
@@ -150,8 +163,9 @@
           <div class="details">
             <p class="name">Brooklyn Simmons</p>
             <img src="images/ratingstars.png" alt="rating" />
-            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
             <span>01 day ago</span>
+            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
+           
           </div>
         </div>
         <div class="review-3">
@@ -159,11 +173,17 @@
           <div class="details">
             <p class="name">Guy Hawkins</p>
             <img src="images/ratingstars.png" alt="rating" />
-            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
             <span>01 day ago</span>
+            <p class="text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt.</p>
+           
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <div class="container">
       <!--Products-->
       <div class="Related-product">
         <h2>Related Products</h2>
@@ -175,39 +195,44 @@
          <button class="arrow-right">&#10095;</button>
         </div>
         <!-- product-1 -->
-        <div>
+        <div class="products">
           <div class="w-25">
           <img src="images/image 1.png" alt="Products" />
           <img src="images/ratingstars.png" alt="rating" />
           <h5 class="caption">Premier Cropped Skinny Jean</h5>
           <p class="price">$385.00</p>
-        </div>
-        <!-- product-2 -->
-        <div class="w-25">
-          <img src="images/image 2.png" alt="products" />
-          <img src="images/stars.png" alt="rating" />
-          <h5 class="caption">Premier Cropped Skinny Jean</h5>
-          <p class="price">$385.00</p>
-        </div>
-        <!-- product-3 -->
-        <div class="w-25">
-          <img src="images/image 3.png" alt="products" />
-          <img src="images/rating.png" alt="rating" />
-          <h5 class="caption">Premier Cropped Skinny Jean</h5>
-          <p class="price">$385.00</p>
-        </div>
-        <!-- product-4 -->
-        <div class="w-25">
-          <img src="images/image 4.png" alt="products" />
-          <img src="images/stars.png" alt="rating" />
-          <h5 class="caption">Premier Cropped Skinny Jean</h5>
-          <p class="price">$385.00</p>
-        </div>
+        </div>  
+          <!-- product-2 -->
+          <div class="w-25">
+            <img src="images/image 2.png" alt="products" />
+            <img src="images/stars.png" alt="rating" />
+            <h5 class="caption">Premier Cropped Skinny Jean</h5>
+            <p class="price">$385.00</p>
+          </div>
+          <!-- product-3 -->
+          <div class="w-25">
+            <img src="images/image 3.png" alt="products" />
+            <img src="images/rating.png" alt="rating" />
+            <h5 class="caption">Premier Cropped Skinny Jean</h5>
+            <p class="price">$385.00</p>
+          </div>
+          <!-- product-4 -->
+          <div class="w-25">
+            <img src="images/image 4.png" alt="products" />
+            <img src="images/stars.png" alt="rating" />
+            <h5 class="caption">Premier Cropped Skinny Jean</h5>
+            <p class="price">$385.00</p>
+          </div>
       </div>
-    </div>
-  </section>
-  <section class="blank-section">
+    </div>  
+  </section>    
 
+  <section class="blank-section">
+   <div class="container">
+    <div class="blank">
+
+    </div>
+   </div>
   </section>
   <!-- footer section -->
     <footer class="footer">
