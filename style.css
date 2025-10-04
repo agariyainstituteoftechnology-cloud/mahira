@@ -1011,6 +1011,37 @@ nav .flex {
   border-bottom: none;
 }
 
+/* Related product section styling */
+.product-section{
+  background-color: #fafcfe;
+  padding: 20px;
+}
+.Related-product h2{
+  color: #2C3D5F;
+  font-size: 24px;
+  margin-left: 20px;
+  font-weight: 500;
+}
+.carousel-wrapper {
+  gap: 10px;
+  margin-right: 20px;
+}
+.carousel-wrapper .arrow-left{
+  font-size: 25px;
+  color: #34373c;
+  gap: 10px;
+  background: none;
+  border: none;
+  background-color: none;
+}
+.carousel-wrapper .arrow-right{
+  font-size: 25px;
+  color: #4581FB;
+  gap: 10px;
+  background: none;
+  border: none;
+}
+
 
 
 
