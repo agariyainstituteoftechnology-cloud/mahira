@@ -150,6 +150,9 @@ nav .flex {
   position: absolute;
   right: 0;
   bottom: 0;
+  max-width: 40%;
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -917,7 +920,6 @@ nav .flex {
   justify-content: space-between;
   gap: 30px;
   background-color:#fafcfe; 
-  align-items: flex-start;
   border-bottom: 1px solid #ddd;
 }
 .description-section .description{
@@ -925,7 +927,7 @@ nav .flex {
 }
 .description h3{
   color: #2C3D5F;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: 600;
 }
@@ -980,9 +982,6 @@ nav .flex {
   margin-right: 15px;
 }
 /* styling for the review details */
-.detals{
-  flex-grow: 1;
-}
 
 .details .name{
   font-weight: 500;
@@ -999,9 +998,11 @@ nav .flex {
 .details span{
   font-size: 16px;
   color: #2C3D5F;
-  justify-content: flex-end;
-  align-items: flex-end;
+  margin: 0 50px 200px;
+  position: absolute;
+  right: 150px;
 }
+
 .details .text{
   margin-top: 5px;
   color: #2C3D5F;
@@ -1049,17 +1050,12 @@ nav .flex {
   background-color: #f4f8f9
 }
 
-.mobl-menu-icon{
- display: none; 
-}
 
 @media(max-width: 1024px){
   
 }
 @media(max-width: 992px){
-  .mobl-menu-icon{
-    display: block;
-  }
+ 
 }
 @media(max-width: 768px){
 
