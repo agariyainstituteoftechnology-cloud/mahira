@@ -50,6 +50,7 @@
 .container {
   margin: auto;
   max-width: 1280px;
+  padding: 0 10px;
 }
 
 /* Global Css End */
@@ -1042,31 +1043,27 @@ nav .flex {
   border: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .blank-section{
   height: 100px;
   margin: 20px 0;
-
   background-color: #f4f8f9
+}
+
+.mobl-menu-icon{
+ display: none; 
+}
+
+@media(max-width: 1024px){
+  
+}
+@media(max-width: 992px){
+  .mobl-menu-icon{
+    display: block;
+  }
+}
+@media(max-width: 768px){
+
+}
+@media(max-width: 620px){
+
 }
