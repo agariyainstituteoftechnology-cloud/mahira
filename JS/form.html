@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ATM System</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .visible { display: block; }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #2193b0;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #176b85;
+    }
+
+    a {
+      color: #2193b0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    span { color: red; }
+
+    #history {
+      text-align: left;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    ul {
+      padding-left: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Register Section -->
+  <div id="register-section" class="section visible">
+    <h2>Register</h2>
+    <form id="register-form" class="form">
+      <input type="text" id="reg-firstname" placeholder="Firstname" />
+      <input type="text" id="reg-lastname" placeholder="Lastname" />
+      <input type="email" id="reg-email" placeholder="Email" />
+      <input type="password" id="reg-password" placeholder="Password" />
+      <button type="submit">Register</button>
+    </form>
+    <p>Already registered? <a href="#" onclick="showSection('login')">Login here</a></p>
+  </div>
+
+  <!-- Login Section -->
+  <div id="login-section" class="section">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Email" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button type="submit">Login</button>
+    </form>
+    <p>New user? <a href="#" onclick="showSection('register')">Register here</a></p>
+  </div>
+
+  <!-- ATM Section -->
+  <div id="atm-section" class="section">
+    <h2>Welcome, <span id="user-name"></span></h2>
+    <p>Balance: <strong><span id="balance"></span> PKR</strong></p>
+
+    <h3>Withdraw</h3>
+    <input type="number" id="withdraw-amount" placeholder="e.g. 1500" />
+    <button onclick="withdraw()">Withdraw</button>
+    <div id="withdraw-result"></div>
+
+    <h3>Deposit</h3>
+    <input type="number" id="deposit-amount" placeholder="e.g. 2000" />
+    <button onclick="deposit()">Deposit</button>
+
+    <h3>Transaction History</h3>
+    <div id="history"></div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    // Show sections
+    function showSection(section) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+      document.getElementById(section + '-section').classList.add('visible');
+    }
+
+    // Registration
+    document.getElementById("register-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      const firstname = document.getElementById("reg-firstname").value.trim();
+      const lastname = document.getElementById("reg-lastname").value.trim();
+      const email = document.getElementById("reg-email").value.trim();
+      const password = document.getElementById("reg-password").value.trim();
+
+      if (!firstname || !lastname || !email || !password) {
+        alert("Har field bharna zaroori hai.");
+        return;
+      }
+
+      localStorage.setItem("firstname", firstname);
+      localStorage.setItem("lastname", lastname);
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+      localStorage.setItem("balance", "50000");
+      localStorage.setItem("transactions", JSON.stringify([]));
+
+      alert("Registered successfully.");
+      showSection("login");
+    });
+
+    // Login
+    document.getElementById("login-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      const email = document.getElementById("login-email").value.trim();
+      const password = document.getElementById("login-password").value.trim();
+      const storedEmail = localStorage.getItem("email");
+      const storedPassword = localStorage.getItem("password");
+
+      if (email === storedEmail && password === storedPassword) {
+        loadATM();
+        showSection("atm");
+      } else {
+        alert("Email ya password galat hai.");
+      }
+    });
+
+    // ATM Functions
+    function loadATM() {
+      document.getElementById("user-name").innerText = localStorage.getItem("firstname");
+      document.getElementById("balance").innerText = localStorage.getItem("balance");
+      renderHistory();
+    }
+
+    function withdraw() {
+      const amount = parseInt(document.getElementById("withdraw-amount").value);
+      let balance = parseInt(localStorage.getItem("balance"));
+      if (isNaN(amount) || amount <= 0) return alert("Sahi amount likhen.");
+      if (amount % 500 !== 0) return alert("Sirf 500, 1000, 5000 ke multiples likhen.");
+      if (amount > balance) return alert("Aap ke paas itna balance nahi hai.");
+
+      const { n5000, n1000, n500, remainder } = breakdown(amount);
+      if (remainder !== 0) return alert("Yeh amount available notes se nahi nikal sakta.");
+
+      balance -= amount;
+      localStorage.setItem("balance", balance.toString());
+      document.getElementById("balance").innerText = balance;
+
+      const noteDetails = [];
+      if (n5000) noteDetails.push(`5000 x ${n5000}`);
+      if (n1000) noteDetails.push(`1000 x ${n1000}`);
+      if (n500)  noteDetails.push(`500 x ${n500}`);
+
+      addTransaction("Withdraw", amount, noteDetails.join(", "));
+      document.getElementById("withdraw-result").innerText = 
+        `Withdrawn: ${amount} PKR\nNotes: ${noteDetails.join(", ")}`;
+      document.getElementById("withdraw-amount").value = "";
+    }
+
+    function deposit() {
+      const amount = parseInt(document.getElementById("deposit-amount").value);
+      if (isNaN(amount) || amount <= 0) return alert("Sahi amount likhen.");
+      let balance = parseInt(localStorage.getItem("balance"));
+      balance += amount;
+      localStorage.setItem("balance", balance.toString());
+      document.getElementById("balance").innerText = balance;
+      addTransaction("Deposit", amount, "Cash deposit");
+      document.getElementById("deposit-amount").value = "";
+      alert("Deposit successful.");
+    }
+
+    function breakdown(amount) {
+      let a = amount;
+      const n5000 = Math.floor(a / 5000); a %= 5000;
+      const n1000 = Math.floor(a / 1000); a %= 1000;
+      const n500 = Math.floor(a / 500);   a %= 500;
+      return { n5000, n1000, n500, remainder: a };
+    }
+
+    function addTransaction(type, amount, details) {
+      let history = JSON.parse(localStorage.getItem("transactions")) || [];
+      history.unshift({ type, amount, details, date: new Date().toLocaleString() });
+      localStorage.setItem("transactions", JSON.stringify(history));
+      renderHistory();
+    }
+
+    function renderHistory() {
+      const history = JSON.parse(localStorage.getItem("transactions")) || [];
+      const historyEl = document.getElementById("history");
+      if (history.length === 0) {
+        historyEl.innerHTML = "<i>No transactions yet</i>";
+      } else {
+        historyEl.innerHTML = "<ul>" + history.map(t =>
+          `<li>${t.type} - ${t.amount} PKR (${t.details}) - <small>${t.date}</small></li>`
+        ).join("") + "</ul>";
+      }
+    }
+
+    function logout() {
+      showSection("login");
+    }
+  </script>
+</body>
+</html>
