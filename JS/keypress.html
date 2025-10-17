@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Press Show in Div</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #output {
+      width: 50%;
+      margin: auto;
+      border: 2px solid #555;
+      padding: 10px;
+      font-size: 24px;
+      min-height: 100px;
+      border-radius: 10px;
+      background-color: #f7f7f7;
+      word-wrap: break-word;
+    }
+    .key {
+      display: inline-block;
+      padding: 8px 10px;
+      margin: 4px;
+      background-color: #dbeafe;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Press any key</h2>
+  <div id="output"></div>
+
+  <script>
+    $(document).on("keydown", function(e) {
+      let keyName = e.key;
+
+      // Special keys ke liye readable naam
+      if (keyName === " ") keyName = "Space";
+      if (keyName === "Enter") keyName = "⏎ Enter";
+      if (keyName === "Backspace") keyName = "⌫ Backspace";
+      if (keyName.startsWith("Arrow")) keyName = keyName.replace("Arrow", "➡ ");
+
+      // Div ke andar naye key ko append karte hain (purane gayab nahi honge)
+      $("#output").append(`<span class="key">${$('<div>').text(keyName).html()}</span>`);
+    });
+  </script>
+
+</body>
+</html>

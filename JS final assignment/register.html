@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | ATM System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="register-page">
+
+  <div class="register-container">
+    <h1>Register Account</h1>
+    <p>Create your ATM account</p>
+
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+      </div>
+
+      <button type="submit" class="btn">Register</button>
+      <p class="login-link">Already have an account? <a href="loginn.html">Login here</a></p>
+      <p id="message"></p>
+    </form>
+  </div>
+
+  <script src="Mini-ATM.Js"></script>
+</body>
+</html>
