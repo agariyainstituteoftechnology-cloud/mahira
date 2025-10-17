@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ATM System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-page">
+
+  <header class="dashboard-header">
+    <h2>ATM Dashboard</h2>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <main class="dashboard-container">
+    <!-- Current Balance -->
+    <section class="balance-section">
+      <h3>Current Balance</h3>
+      <div id="balance" class="balance-amount">Rs. 0</div>
+    </section>
+
+    <!-- Graph Section -->
+    <section class="graph-section">
+      <h3>Deposit vs Withdraw</h3>
+      <canvas id="transactionChart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="history-section">
+      <h3>Recent Transactions</h3>
+      <ul id="recentTransactions" class="transaction-list"></ul>
+      <button id="viewAllBtn" class="btn">View All</button>
+    </section>
+  </main>
+
+  <script src="Mini-ATM.Js"></script>
+</body>
+</html>
